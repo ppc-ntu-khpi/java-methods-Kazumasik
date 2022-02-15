@@ -2,11 +2,15 @@
 
 //import domain.Exercise;
 
+import java.util.Scanner;
+
 public class TestResult {
 
     public static void main(String[] args) {
-
-        int R=10;
-        System.out.println("Area of a circle for R="+R+"m is "+Exercise.Calculate(R)+"m"+'\u00B2');
+        Scanner in = new Scanner(System.in); 
+        System.out.print("Введіть дату народження в таком форматі(dd mm yyyy): ");
+        String strDate = in.nextLine();
+        in.close();
+        Exercise.Calculate(strDate);
     }
 }
